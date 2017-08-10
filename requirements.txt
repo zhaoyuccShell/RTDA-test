@@ -1,0 +1,7 @@
+dash==0.17.8rc2
+dash-auth==0.0.4rc4
+dash-renderer
+dash-core-components
+dash-html-components
+plotly
+gunicorn
