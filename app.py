@@ -4,8 +4,36 @@ import dash_core_components as dcc
 import dash_html_components as html
 import os
 import plotly.plotly as py
+import dash_auth
+
+import config
+
+if config.PATH_BASED_ROUTING:
+    url_base_pathname = '/{}/'.format(config.DASH_APP_NAME)
+else:
+    url_base_pathname = '/'
 
 app = dash.Dash(__name__)
+if config.DASH_APP_PRIVACY == 'private':
+    if config.PATH_BASED_ROUTING:
+        APP_URL = '{}/{}'.format(
+            config.PLOTLY_DASH_DOMAIN,
+            config.DASH_APP_NAME,
+        )
+    else:
+        APP_URL = '{}://{}.{}'.format(
+            config.PLOTLY_DASH_DOMAIN.split('://')[0],
+            config.DASH_APP_NAME,
+            config.PLOTLY_DASH_DOMAIN.split('://')[1]
+        )    
+
+    dash_auth.PlotlyAuth(
+        app,
+        config.DASH_APP_NAME,
+        config.DASH_APP_PRIVACY,
+        APP_URL
+    )
+
 
 # Expose the server variable
 server = app.server
