@@ -5,8 +5,6 @@ import dash_html_components as html
 import os
 import plotly.plotly as py
 
-import config
-
 app = dash.Dash(__name__)
 
 # Expose the server variable
