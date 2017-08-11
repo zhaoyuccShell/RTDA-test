@@ -17,7 +17,7 @@ DASH_APP_NAME = 'my-dash-app'
 # users use this option.
 PATH_BASED_ROUTING = 'True'
 
-DASH_APP_PRIVACY = 'private'
+DASH_APP_PRIVACY = 'public'
 
 # Fill in with your Plotly On-Premise username
 os.environ['PLOTLY_USERNAME'] = 'your-plotly-username'
