@@ -17,7 +17,14 @@ DASH_APP_NAME = 'my-dash-app'
 # users use this option.
 PATH_BASED_ROUTING = 'True'
 
+# Set to `private` if you want to add a login screen to your app
+# You can provision who can view the app in your list of files at <your-plotly-server>/organize
+# Set to `public` if you want your app to be accessible to anyone who has access to your network
 DASH_APP_PRIVACY = 'public'
+
+#######################################################################################
+## The following settings are only required if `DASH_APP_PRIVACY` is set to 'public' ##
+#######################################################################################
 
 # Fill in with your Plotly On-Premise username
 os.environ['PLOTLY_USERNAME'] = 'your-plotly-username'
