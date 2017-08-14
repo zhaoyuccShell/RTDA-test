@@ -8,6 +8,7 @@ import dash_auth
 
 import config
 
+# Checks if running inside Plotly On-Premise environment
 if 'DYNO' in os.environ:
     if config.PATH_BASED_ROUTING:
         if config.DASH_APP_NAME == 'name-of-your-dash-app':
