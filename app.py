@@ -13,7 +13,7 @@ if config.PATH_BASED_ROUTING:
 else:
     url_base_pathname = '/'
 
-app = dash.Dash(__name__)
+app = dash.Dash(__name__, url_base_pathname='/chris-dash-app-test/')
 if config.DASH_APP_PRIVACY == 'private':
     if config.PATH_BASED_ROUTING:
         APP_URL = '{}/{}'.format(
@@ -39,8 +39,8 @@ if config.DASH_APP_PRIVACY == 'private':
 server = app.server
 
 # Serve JS and CSS files locally instead of from global CDN
-app.scripts.config.serve_locally = True
-app.css.config.serve_locally = True
+# app.scripts.config.serve_locally = True
+# app.css.config.serve_locally = True
 
 # Standard Dash app code below
 app.layout = html.Div([
