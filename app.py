@@ -8,14 +8,16 @@ import dash_auth
 
 import config
 
-print(dash.__version__)
+if 'DYNO' in os.environ:
+    if config.PATH_BASED_ROUTING:
+        if config.DASH_APP_NAME == 'name-of-your-dash-app':
+             raise Exception('Please enter the name of your dash app inside config.py')
+        app.config.requests_pathname_prefix = '/{}/'.format(
+            config.DASH_APP_NAME
+        )
 
-if config.PATH_BASED_ROUTING:
-    url_base_pathname = '/{}/'.format(config.DASH_APP_NAME)
-else:
-    url_base_pathname = '/'
 
-app = dash.Dash(__name__, url_base_pathname='/')
+app = dash.Dash(__name__)
 if config.DASH_APP_PRIVACY == 'private':
     if config.PATH_BASED_ROUTING:
         APP_URL = '{}/{}'.format(

@@ -6,7 +6,7 @@ import os
 #
 # This name MUST match the name that you specified in the
 # Dash App Manager
-DASH_APP_NAME = 'my-dash-app'
+DASH_APP_NAME = 'name-of-your-dash-app'
 
 # Dash On-Premise is configured with either "Path based routing" 
 # or "Domain based routing"
@@ -15,7 +15,7 @@ DASH_APP_NAME = 'my-dash-app'
 # then set this to `False`. If it was not, set this to 'True'.
 # Path based routing is the default option and most On-Premise
 # users use this option.
-PATH_BASED_ROUTING = 'True'
+PATH_BASED_ROUTING = True
 
 # Set to `private` if you want to add a login screen to your app
 # You can provision who can view the app in your list of files at <your-plotly-server>/organize
@@ -23,7 +23,7 @@ PATH_BASED_ROUTING = 'True'
 DASH_APP_PRIVACY = 'public'
 
 #######################################################################################
-## The following settings are only required if `DASH_APP_PRIVACY` is set to 'public' ##
+## The following settings are only required if `DASH_APP_PRIVACY` is set to 'private' ##
 #######################################################################################
 
 # Fill in with your Plotly On-Premise username
