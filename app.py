@@ -8,6 +8,8 @@ import dash_auth
 
 import config
 
+app = dash.Dash(__name__)
+
 # Checks if running inside Plotly On-Premise environment
 if 'DYNO' in os.environ:
     if config.PATH_BASED_ROUTING:
@@ -17,8 +19,6 @@ if 'DYNO' in os.environ:
             config.DASH_APP_NAME
         )
 
-
-app = dash.Dash(__name__)
 if config.DASH_APP_PRIVACY == 'private':
     if config.PATH_BASED_ROUTING:
         APP_URL = '{}/{}'.format(
