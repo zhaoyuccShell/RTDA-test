@@ -8,6 +8,8 @@ import dash_auth
 
 import config
 
+print(dash.__version__)
+
 if config.PATH_BASED_ROUTING:
     url_base_pathname = '/{}/'.format(config.DASH_APP_NAME)
 else:
