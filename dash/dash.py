@@ -70,6 +70,7 @@ class Dash(object):
             self.access_codes = None
 
         self.url_base_pathname = url_base_pathname
+        self.url_base_proxy = url_base_proxy
 
         # list of dependencies
         self.callback_map = {}
@@ -133,7 +134,8 @@ class Dash(object):
 
         # catch-all for front-end routes
         self.server.add_url_rule(
-            '{}<path:path>'.format(self.url_base_pathname),
+            # '{}<path:path>'.format(self.url_base_pathname),
+            '/',
             view_func=self.index,
             endpoint='{}<path:path>'.format(self.url_base_pathname)
         )
