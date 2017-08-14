@@ -15,7 +15,7 @@ if config.PATH_BASED_ROUTING:
 else:
     url_base_pathname = '/'
 
-app = dash.Dash(__name__, url_base_pathname='/chris-dash-app-test-2/')
+app = dash.Dash(__name__, url_base_pathname='/')
 if config.DASH_APP_PRIVACY == 'private':
     if config.PATH_BASED_ROUTING:
         APP_URL = '{}/{}'.format(
