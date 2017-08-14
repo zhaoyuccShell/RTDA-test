@@ -13,7 +13,7 @@ if config.PATH_BASED_ROUTING:
 else:
     url_base_pathname = '/'
 
-app = dash.Dash(__name__, url_base_pathname='/chris-dash-app-test/')
+app = dash.Dash(__name__, url_base_pathname='/')
 if config.DASH_APP_PRIVACY == 'private':
     if config.PATH_BASED_ROUTING:
         APP_URL = '{}/{}'.format(
@@ -25,7 +25,7 @@ if config.DASH_APP_PRIVACY == 'private':
             config.PLOTLY_DASH_DOMAIN.split('://')[0],
             config.DASH_APP_NAME,
             config.PLOTLY_DASH_DOMAIN.split('://')[1]
-        )    
+        )
 
     dash_auth.PlotlyAuth(
         app,
