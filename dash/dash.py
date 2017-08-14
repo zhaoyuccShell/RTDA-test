@@ -212,7 +212,10 @@ class Dash(object):
     @_requires_auth
     def serve_layout(self):
         print(flask.request.url)
-        layout = self._layout_value()
+        try:
+            layout = self._layout_value()
+        except:
+            print('Cant print url')
 
         # TODO - Set browser cache limit - pass hash into frontend
         return flask.Response(
@@ -323,7 +326,10 @@ class Dash(object):
     # Serve the JS bundles for each package
     def serve_component_suites(self, package_name, path_in_package_dist):
         print(flask.request.url)
-        if (package_name not in self.registered_paths):
+        try:
+        if  (package_name not in self.registered_paths):
+        except:
+            print('Cant print url')
             raise Exception(
                 'Error loading dependency.\n'
                 '"{}" is not a registered library.\n'
@@ -354,7 +360,10 @@ class Dash(object):
 
     def index(self, *args, **kwargs):
         print(flask.request.url)
-        scripts = self._generate_scripts_html()
+        try:
+            scripts = self._generate_scripts_html()
+        except:
+            print('Cant print url')
         css = self._generate_css_dist_html()
         config = self._generate_config_html()
         title = getattr(self, 'title', 'Dash')
@@ -384,7 +393,10 @@ class Dash(object):
     @_requires_auth
     def dependencies(self):
         print(flask.request.url)
-        return flask.jsonify([
+        try:
+            return flask.jsonify([
+        except:
+            print('Cant print url')
             {
                 'output': {
                     'id': k.split('.')[0],
@@ -544,7 +556,10 @@ class Dash(object):
     # TODO - Check this map for recursive or other ill-defined non-tree
     # relationships
     def callback(self, output, inputs=[], state=[], events=[]):
-        print(flask.request.url)
+        try:
+            print(flask.request.url)
+        except:
+            print('Cant print url')
         self._validate_callback(output, inputs, state, events)
 
         callback_id = '{}.{}'.format(
@@ -592,7 +607,10 @@ class Dash(object):
     @_requires_auth
     def dispatch(self):
         print(flask.request.url)
-        body = flask.request.get_json()
+        try:
+            body = flask.request.get_json()
+        except:
+            print('Cant print url')
         inputs = body.get('inputs', [])
         state = body.get('state', [])
         output = body['output']
