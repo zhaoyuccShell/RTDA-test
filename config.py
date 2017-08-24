@@ -15,7 +15,7 @@ DASH_APP_NAME = 'chris-content-length'
 # then set this to `False`. If it was not, set this to 'True'.
 # Path based routing is the default option and most On-Premise
 # users use this option.
-PATH_BASED_ROUTING = False
+PATH_BASED_ROUTING = True
 
 # Set to `private` if you want to add a login screen to your app
 # You can provision who can view the app in your list of files at <your-plotly-server>/organize
