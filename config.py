@@ -6,7 +6,7 @@ import os
 #
 # This name MUST match the name that you specified in the
 # Dash App Manager
-DASH_APP_NAME = 'chris-content-length'
+DASH_APP_NAME = 'name-of-your-dash-app'
 
 # Dash On-Premise is configured with either "Path based routing" 
 # or "Domain based routing"
