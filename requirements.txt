@@ -1,6 +1,6 @@
-dash==0.17.8rc3
+dash==0.18.0
 dash-auth==0.0.6
-dash-renderer==0.8.0rc3
+dash-renderer==0.8.0
 dash-core-components
 dash-html-components
 plotly
