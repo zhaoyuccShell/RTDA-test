@@ -19,25 +19,24 @@ if 'DYNO' in os.environ:
             config.DASH_APP_NAME
         )
 
-if config.DASH_APP_PRIVACY == 'private':
-    if config.PATH_BASED_ROUTING:
-        APP_URL = '{}/{}'.format(
-            config.PLOTLY_DASH_DOMAIN,
-            config.DASH_APP_NAME,
-        )
-    else:
-        APP_URL = '{}://{}.{}'.format(
-            config.PLOTLY_DASH_DOMAIN.split('://')[0],
-            config.DASH_APP_NAME,
-            config.PLOTLY_DASH_DOMAIN.split('://')[1]
-        )
-
-    dash_auth.PlotlyAuth(
-        app,
+if config.PATH_BASED_ROUTING:
+    APP_URL = '{}/{}'.format(
+        config.PLOTLY_DASH_DOMAIN,
         config.DASH_APP_NAME,
-        config.DASH_APP_PRIVACY,
-        APP_URL
     )
+else:
+    APP_URL = '{}://{}.{}'.format(
+        config.PLOTLY_DASH_DOMAIN.split('://')[0],
+        config.DASH_APP_NAME,
+        config.PLOTLY_DASH_DOMAIN.split('://')[1]
+    )
+
+dash_auth.PlotlyAuth(
+    app,
+    config.DASH_APP_NAME,
+    config.DASH_APP_PRIVACY,
+    APP_URL
+)
 
 
 # Expose the server variable
