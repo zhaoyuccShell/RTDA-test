@@ -41,10 +41,6 @@ PLOTLY_DASH_DOMAIN='https://your-dash-manager-plotly-domain.com'
 # Set to `public` if you want your app to be accessible to anyone who has access to your network
 DASH_APP_PRIVACY = 'public'
 
-#######################################################################################
-## The following settings are only required if `DASH_APP_PRIVACY` is set to 'private' ##
-#######################################################################################
-
 # Keep as True if your SSL certificates are valid.
 # If you are just trialing Plotly On-Premise with self signed certificates,
 # then you can set this to False. Note that self-signed certificates are not
