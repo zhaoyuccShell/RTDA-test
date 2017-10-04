@@ -18,7 +18,7 @@ DASH_APP_NAME = 'tesla-support-ex'
 PATH_BASED_ROUTING = True
 
 # Fill in with your Plotly On-Premise username
-os.environ['PLOTLY_USERNAME'] = 'cc4
+os.environ['PLOTLY_USERNAME'] = 'cc4'
 
 # Fill in with your Plotly On-Premise API key
 # See <your-plotly-server>/settings/api to generate a key
