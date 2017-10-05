@@ -39,7 +39,7 @@ PLOTLY_DASH_DOMAIN='https://dash-buildly.plotly.systems/'
 # Set to `private` if you want to add a login screen to your app
 # You can provision who can view the app in your list of files at <your-plotly-server>/organize
 # Set to `public` if you want your app to be accessible to anyone who has access to your network
-DASH_APP_PRIVACY = 'public'
+DASH_APP_PRIVACY = 'private'
 
 # Keep as True if your SSL certificates are valid.
 # If you are just trialing Plotly On-Premise with self signed certificates,
