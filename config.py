@@ -29,12 +29,12 @@ os.environ['PLOTLY_USERNAME'] = 'cc4'
 os.environ['PLOTLY_API_KEY'] = 'p0EdzqVWap4T0IGhvdvy'
 
 # Fill in with your Plotly On-Premise domain
-os.environ['PLOTLY_DOMAIN'] = 'https://buildly.plotly.systems/'
+os.environ['PLOTLY_DOMAIN'] = 'https://buildly.plotly.systems'
 os.environ['PLOTLY_API_DOMAIN'] = os.environ['PLOTLY_DOMAIN']
 
 # Fill in with the domain of your Dash subdomain.
 # This matches the domain of the Dash App Manager
-PLOTLY_DASH_DOMAIN='https://dash-buildly.plotly.systems/'
+PLOTLY_DASH_DOMAIN='https://dash-buildly.plotly.systems'
 
 # Set to `private` if you want to add a login screen to your app
 # You can provision who can view the app in your list of files at <your-plotly-server>/organize
