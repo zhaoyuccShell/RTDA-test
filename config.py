@@ -45,4 +45,4 @@ DASH_APP_PRIVACY = 'private'
 # If you are just trialing Plotly On-Premise with self signed certificates,
 # then you can set this to False. Note that self-signed certificates are not
 # safe for production.
-os.environ['PLOTLY_SSL_VERIFICATION'] = 'True'
+os.environ['PLOTLY_SSL_VERIFICATION'] = 'False'
