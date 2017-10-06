@@ -1,6 +1,10 @@
 dash==0.18.3
 dash-auth==0.0.10
+<<<<<<< HEAD
 dash-renderer==0.11.0
+=======
+dash-renderer==0.10.0
+>>>>>>> 0d97ceedbd694fdbbb2956e74b06aa58e234d191
 dash-core-components
 dash-html-components
 plotly

@@ -21,14 +21,14 @@ if 'DYNO' in os.environ:
 
 if config.PATH_BASED_ROUTING:
     APP_URL = '{}/{}'.format(
-        config.PLOTLY_DASH_DOMAIN,
+        config.PLOTLY_DASH_DOMAIN.strip('/'),
         config.DASH_APP_NAME,
     )
 else:
     APP_URL = '{}://{}.{}'.format(
         config.PLOTLY_DASH_DOMAIN.split('://')[0],
         config.DASH_APP_NAME,
-        config.PLOTLY_DASH_DOMAIN.split('://')[1]
+        config.PLOTLY_DASH_DOMAIN.split('://')[1].strip('/')
     )
 
 dash_auth.PlotlyAuth(
