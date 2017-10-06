@@ -48,7 +48,7 @@ server = app.server
 
 # Standard Dash app code below
 app.layout = html.Div([
-    html.H2('Hello Worlds'),
+    html.H2('Hello World'),
     dcc.Dropdown(
         id='dropdown',
         options=[{'label': i, 'value': i} for i in ['LA', 'NYC', 'MTL']],
