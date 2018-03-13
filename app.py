@@ -4,7 +4,6 @@ import dash_core_components as dcc
 import dash_html_components as html
 import os
 import plotly.plotly as py
-import dash_auth
 
 import config
 
