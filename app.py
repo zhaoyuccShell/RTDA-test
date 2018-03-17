@@ -9,8 +9,11 @@ from components import Column, Header, Row
 import config
 from auth import auth
 
-app = dash.Dash(__name__)
 
+app = dash.Dash(
+    __name__,
+    # Serve any files that are available in the `static` folder
+    static_folder='static'
 )
 auth(app)
 
