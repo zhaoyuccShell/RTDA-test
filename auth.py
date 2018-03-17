@@ -45,6 +45,17 @@ def auth(app):
                     config.DASH_APP_NAME
                 )
 
+        if os.environ['PLOTLY_API_KEY'] == 'your-plotly-api-key':
+             raise Exception(''
+                'Please enter the your Plotly API key inside config.py')
+
+        if os.environ['PLOTLY_USERNAME'] == 'your-plotly-username':
+             raise Exception(''
+                'Please enter the your Plotly username inside config.py')
+
+        if os.environ['PLOTLY_DOMAIN'] == 'https://your-plotly-domain.com':
+             raise Exception(''
+                'Please enter the your Plotly domain inside config.py')
         if config.PATH_BASED_ROUTING:
             APP_URL = '{}/{}'.format(
                 config.PLOTLY_DASH_DOMAIN.strip('/'),
