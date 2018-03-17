@@ -36,8 +36,10 @@ os.environ['PLOTLY_USERNAME'] = 'your-plotly-username'
 # See <your-plotly-server>/settings/api to generate a key
 # If you have already created a key and saved it on your own machine
 # (from the Plotly-Python library instructions at https://plot.ly/python/getting-started)
-# then you can view that key in your ~/.plotly/.config file or by running:
-# `python -c import plotly; print(plotly.tools.get_config_file())`
+# then you can view that key in your ~/.plotly/.config file
+# or by running the following commands in a Python session:
+# import plotly
+# print(plotly.tools.get_config_file())
 os.environ['PLOTLY_API_KEY'] = 'your-plotly-api-key'
 
 # Fill in with your Plotly On-Premise domain
