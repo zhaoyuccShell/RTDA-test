@@ -1,15 +1,16 @@
 import dash
-import dash_auth
 import dash_core_components as dcc
 import dash_html_components as html
 import os
 import plotly.plotly as py
 
 import config
+from auth import auth
 
 app = dash.Dash(__name__)
 
 )
+auth(app)
 
 
 # Expose the server variable
