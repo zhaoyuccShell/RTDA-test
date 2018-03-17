@@ -2,12 +2,11 @@ import dash
 from dash.dependencies import Input, Output
 import dash_core_components as dcc
 import dash_html_components as html
-import os
-import plotly.plotly as py
 
 from components import Column, Header, Row
 import config
 from auth import auth
+from utils import StaticUrlPath
 
 
 app = dash.Dash(
