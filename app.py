@@ -36,5 +36,15 @@ app.layout = html.Div([
 def display_value(value):
     return 'You have selected "{}"'.format(value)
 
+# Optionally include CSS
+app.css.append_css({
+    'external_url': [
+        StaticUrlPath(css) for css in [
+            'dash.css', 'grid.css', 'loading.css', 'page.css',
+            'spacing.css', 'styles.css', 'tables.css', 'typography.css'
+        ]
+    ]
+})
+
 if __name__ == '__main__':
     app.run_server(debug=True)
