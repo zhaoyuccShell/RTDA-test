@@ -8,6 +8,14 @@ import os
 # Dash App Manager
 DASH_APP_NAME = 'name-of-your-dash-app'
 
+# Set to `private` if you want to add a login screen to your app
+# You can provision who can view the app in your list of files
+# at <your-plotly-server>/organize.
+# Set to `public` if you want your app to be accessible to
+# anyone who has access to your Plotly server on your network without
+# a login screen.
+DASH_APP_PRIVACY = 'public'
+
 # Dash On-Premise is configured with either "Path based routing"
 # or "Domain based routing"
 # Ask your server administrator which version was set up.
@@ -16,6 +24,10 @@ DASH_APP_NAME = 'name-of-your-dash-app'
 # Path based routing is the default option and most On-Premise
 # users use this option.
 PATH_BASED_ROUTING = True
+
+###########################################################################
+# Only fill out this next section if DASH_APP_PRIVACY is set to 'private' #
+###########################################################################
 
 # Fill in with your Plotly On-Premise username
 os.environ['PLOTLY_USERNAME'] = 'your-plotly-username'
@@ -35,11 +47,6 @@ os.environ['PLOTLY_API_DOMAIN'] = os.environ['PLOTLY_DOMAIN']
 # Fill in with the domain of your Dash subdomain.
 # This matches the domain of the Dash App Manager
 PLOTLY_DASH_DOMAIN='https://your-dash-manager-plotly-domain.com'
-
-# Set to `private` if you want to add a login screen to your app
-# You can provision who can view the app in your list of files at <your-plotly-server>/organize
-# Set to `public` if you want your app to be accessible to anyone who has access to your network
-DASH_APP_PRIVACY = 'public'
 
 # Keep as True if your SSL certificates are valid.
 # If you are just trialing Plotly On-Premise with self signed certificates,
