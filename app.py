@@ -1,6 +1,3 @@
-import datetime
-import pandas as pd
-
 import dash
 import dash_auth
 import dash_core_components as dcc
@@ -10,10 +7,6 @@ import plotly.plotly as py
 import dash_auth
 
 import config
-
-from dash.dependencies import Input, Output, State
-import plotly.graph_objs as go
-import colorlover as cl
 
 app = dash.Dash(__name__)
 
