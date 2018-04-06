@@ -5,5 +5,3 @@ dash-core-components
 dash-html-components
 plotly
 gunicorn
-colorlover
-pandas
