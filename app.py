@@ -9,7 +9,7 @@ import config
 from auth import auth
 from utils import StaticUrlPath
 
-root = '/rtda-test/lib/PWitsml'
+root = '/app/lib/PWitsml'
 classpath = root + '/activation.jar;' + \
             root + '/javax.mail.jar;' + \
             root + '/jwitsml-1.0.jar;' + \
