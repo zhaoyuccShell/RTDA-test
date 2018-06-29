@@ -1,0 +1,842 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f5c47da1878, pid=6607, tid=0x00007f5c27fff700
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_161-b12) (build 1.8.0_161-b12)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.161-b12 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [_jpype.cpython-36m-x86_64-linux-gnu.so+0x30878]  JPJavaEnv::NewLocalRef(_jobject*)+0x58
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00007f5c27ffdc20, RCX=0x0000000000000000, RDX=0x00007f5c27fffa40
+RSP=0x00007f5c27ffdc10, RBP=0x00007f5c47ffa1c0, RSI=0x00007f5c27ffdbf8, RDI=0x0000000000000003
+R8 =0x00007f5be8001170, R9 =0x000055f8b9bc3490, R10=0x000055f8b9f50500, R11=0x000055f8b9bc3490
+R12=0x00007f5c27ffdc1f, R13=0x000055f8bb145988, R14=0x000055f8bb6c7920, R15=0x00007f5c27ffdda0
+RIP=0x00007f5c47da1878, EFLAGS=0x0000000000010202, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f5c27ffdc10)
+0x00007f5c27ffdc10:   00007f5c47de31c8 00007f5be8000020
+0x00007f5c27ffdc20:   00007f5c47ffa1d0 00007f5be8001158
+0x00007f5c27ffdc30:   000055f8bb72e400 0000000000000000
+0x00007f5c27ffdc40:   000055f8bb6c7fa0 000055f8bb145988
+0x00007f5c27ffdc50:   0000000000000001 000055f8bb72e4c8
+0x00007f5c27ffdc60:   00007f5be80012a0 00007f5c47db53e1
+0x00007f5c27ffdc70:   0000000000000001 00007f5c27ffdcb0
+0x00007f5c27ffdc80:   000055f8bb735390 00007f5c27ffdc90
+0x00007f5c27ffdc90:   00007f5c47ffa1d0 00007f5be80011d8
+0x00007f5c27ffdca0:   0000000000000000 0000000000000000
+0x00007f5c27ffdcb0:   00007f5c47ffa6b0 0000000000000000
+0x00007f5c27ffdcc0:   0000000000000000 0000000000000000
+0x00007f5c27ffdcd0:   0000000000000000 0000000000000000
+0x00007f5c27ffdce0:   0000000000000000 0000000000000000
+0x00007f5c27ffdcf0:   0000000000000000 0000000000000000
+0x00007f5c27ffdd00:   0000000000000000 00007f5be80010e0
+0x00007f5c27ffdd10:   0000000000000000 00007f5c4660e378
+0x00007f5c27ffdd20:   00007f5c27ffddc0 0000000000000000
+0x00007f5c27ffdd30:   00007f5c62d35048 00007f5c47ddf73e
+0x00007f5c27ffdd40:   00007f5c27ffdd70 00007f5c27ffdd80
+0x00007f5c27ffdd50:   00007f5c4660c290 00007f5c27ffdd80
+0x00007f5c27ffdd60:   000055f8bb72d798 f66e7846982de600
+0x00007f5c27ffdd70:   00007f5be80010e0 00007f5c615028c8
+0x00007f5c27ffdd80:   00007f5c47ffa1d0 00007f5be80010b8
+0x00007f5c27ffdd90:   000055f8b9f6d200 000055f8b9b8fa20
+0x00007f5c27ffdda0:   00007f5be8001120 00007f5be8001128
+0x00007f5c27ffddb0:   00007f5be8001128 000055f8b9b65103
+0x00007f5c27ffddc0:   00007f5c47ffa6b0 0000000000000000
+0x00007f5c27ffddd0:   0000000000000000 0000000000000000
+0x00007f5c27ffdde0:   0000000000000000 0000000000000000
+0x00007f5c27ffddf0:   0000000000000000 00007f5be8001100
+0x00007f5c27ffde00:   00007f5be8001108 00007f5be8001108 
+
+Instructions: (pc=0x00007f5c47da1878)
+0x00007f5c47da1858:   24 10 e8 71 32 ff ff 48 8d 3d e1 08 04 00 e8 35
+0x00007f5c47da1868:   21 ff ff 4c 89 f7 c6 44 24 20 00 e8 98 2b ff ff
+0x00007f5c47da1878:   48 8b 10 4c 89 ee 48 89 c7 ff 92 c8 00 00 00 0f
+0x00007f5c47da1888:   b6 74 24 20 48 8b 7c 24 18 48 89 c3 48 8d 45 10 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x00007f5c27ffdc20 is an unknown value
+RCX=0x0000000000000000 is an unknown value
+RDX=0x00007f5c27fffa40 is an unknown value
+RSP=0x00007f5c27ffdc10 is an unknown value
+RBP=0x00007f5c47ffa1c0: _ZTV11JPypeTracer+0 in /home/buerliu/anaconda3/lib/python3.6/site-packages/_jpype.cpython-36m-x86_64-linux-gnu.so at 0x00007f5c47d71000
+RSI=0x00007f5c27ffdbf8 is an unknown value
+RDI=0x0000000000000003 is an unknown value
+R8 =0x00007f5be8001170 is an unknown value
+R9 =0x000055f8b9bc3490: <offset 0x16a490> in /home/buerliu/anaconda3/bin/python at 0x000055f8b9a59000
+R10=0x000055f8b9f50500: PyTuple_Type+0 in /home/buerliu/anaconda3/bin/python at 0x000055f8b9a59000
+R11=0x000055f8b9bc3490: <offset 0x16a490> in /home/buerliu/anaconda3/bin/python at 0x000055f8b9a59000
+R12=0x00007f5c27ffdc1f is an unknown value
+R13=0x000055f8bb145988 is a global jni handle
+R14=0x000055f8bb6c7920 is an unknown value
+R15=0x00007f5c27ffdda0 is an unknown value
+
+
+Stack: [0x00007f5c277ff000,0x00007f5c28000000],  sp=0x00007f5c27ffdc10,  free space=8187k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [_jpype.cpython-36m-x86_64-linux-gnu.so+0x30878]  JPJavaEnv::NewLocalRef(_jobject*)+0x58
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 17920K, used 1229K [0x00000000ec780000, 0x00000000edb80000, 0x0000000100000000)
+  eden space 15360K, 8% used [0x00000000ec780000,0x00000000ec8b3608,0x00000000ed680000)
+  from space 2560K, 0% used [0x00000000ed900000,0x00000000ed900000,0x00000000edb80000)
+  to   space 2560K, 0% used [0x00000000ed680000,0x00000000ed680000,0x00000000ed900000)
+ ParOldGen       total 40960K, used 0K [0x00000000c5600000, 0x00000000c7e00000, 0x00000000ec780000)
+  object space 40960K, 0% used [0x00000000c5600000,0x00000000c5600000,0x00000000c7e00000)
+ Metaspace       used 2696K, capacity 4490K, committed 4864K, reserved 1056768K
+  class space    used 292K, capacity 386K, committed 512K, reserved 1048576K
+
+Card table byte_map: [0x00007f5c351b3000,0x00007f5c35389000] byte_map_base: 0x00007f5c34b88000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f5c465af920
+ Begin Bits: [0x00007f5c2e2b0000, 0x00007f5c2f158000)
+ End Bits:   [0x00007f5c2f158000, 0x00007f5c30000000)
+
+Polling page: 0x00007f5c62d8a000
+
+CodeCache: size=245760Kb used=1156Kb max_used=1164Kb free=244603Kb
+ bounds [0x00007f5c35749000, 0x00007f5c359b9000, 0x00007f5c44749000]
+ total_blobs=285 nmethods=58 adapters=142
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.174 Thread 0x000055f8bb6ba800   54       3       java.lang.reflect.Method::copy (84 bytes)
+Event: 0.174 Thread 0x000055f8bb6ba800 nmethod 54 0x00007f5c35868810 code [0x00007f5c358689a0, 0x00007f5c35868d58]
+Event: 0.178 Thread 0x000055f8bb6b8000   55       4       java.lang.Class$MethodArray::matchesNameAndDescriptor (42 bytes)
+Event: 0.182 Thread 0x000055f8bb6b8000 nmethod 55 0x00007f5c3586bcd0 code [0x00007f5c3586be40, 0x00007f5c3586c0e8]
+Event: 0.189 Thread 0x000055f8bb6ba800   56       3       java.lang.ref.SoftReference::get (29 bytes)
+Event: 0.190 Thread 0x000055f8bb6ba800 nmethod 56 0x00007f5c3586b910 code [0x00007f5c3586ba80, 0x00007f5c3586bc70]
+Event: 0.190 Thread 0x000055f8bb6ba800   57       3       java.lang.reflect.Modifier::isAbstract (14 bytes)
+Event: 0.190 Thread 0x000055f8bb6ba800 nmethod 57 0x00007f5c3586b590 code [0x00007f5c3586b700, 0x00007f5c3586b890]
+Event: 0.190 Thread 0x000055f8bb6ba800   58       3       java.lang.Class::arrayContentsEq (70 bytes)
+Event: 0.190 Thread 0x000055f8bb6ba800 nmethod 58 0x00007f5c3586ae50 code [0x00007f5c3586afe0, 0x00007f5c3586b410]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (9 events):
+Event: 0.038 Thread 0x000055f8bb42a000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000ec787ca0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/sh
+Event: 0.038 Thread 0x000055f8bb42a000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x00000000ec787f88) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/prims/jni.c
+Event: 0.120 Thread 0x000055f8bb42a000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000ec7fa6c0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 0.120 Thread 0x000055f8bb42a000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000ec7fa8d0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 0.120 Thread 0x000055f8bb42a000 Exception <a 'java/lang/NoClassDefFoundError': Lorg/jwitsml/WitsmlVersion;> (0x00000000ec7fad50) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 199]
+Event: 0.147 Thread 0x000055f8bb42a000 Exception <a 'java/lang/NoClassDefFoundError': Lorg/jwitsml/WitsmlVersion/VERSION_1_3_1;> (0x00000000ec8076f8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 199]
+Event: 0.148 Thread 0x000055f8bb42a000 Exception <a 'java/lang/NoClassDefFoundError': Ljava/net;> (0x00000000ec8080d0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 199]
+Event: 0.160 Thread 0x000055f8bb42a000 Exception <a 'java/lang/NoClassDefFoundError': Ljava/lang;> (0x00000000ec80df28) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 199]
+Event: 0.201 Thread 0x000055f8bb42a000 Exception <a 'java/lang/NoClassDefFoundError': Lorg/jwitsml/Capabilities;> (0x00000000ec87b570) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 199]
+
+Events (10 events):
+Event: 0.160 loading class java/lang
+Event: 0.160 loading class java/lang done
+Event: 0.163 loading class java/util/stream/IntStream
+Event: 0.163 loading class java/util/stream/IntStream done
+Event: 0.164 loading class java/io/UnsupportedEncodingException
+Event: 0.164 loading class java/io/UnsupportedEncodingException done
+Event: 0.197 loading class java/util/SortedMap
+Event: 0.198 loading class java/util/SortedMap done
+Event: 0.201 loading class org/jwitsml/Capabilities
+Event: 0.201 loading class org/jwitsml/Capabilities done
+
+
+Dynamic libraries:
+c5600000-c7e00000 rw-p 00000000 00:00 0 
+c7e00000-ec780000 ---p 00000000 00:00 0 
+ec780000-edb80000 rw-p 00000000 00:00 0 
+edb80000-100000000 ---p 00000000 00:00 0 
+100000000-100080000 rw-p 00000000 00:00 0 
+100080000-140000000 ---p 00000000 00:00 0 
+55f8b9a59000-55f8b9d18000 r-xp 00000000 08:01 43256718                   /home/buerliu/anaconda3/bin/python3.6
+55f8b9f17000-55f8b9f1a000 r--p 002be000 08:01 43256718                   /home/buerliu/anaconda3/bin/python3.6
+55f8b9f1a000-55f8b9f7d000 rw-p 002c1000 08:01 43256718                   /home/buerliu/anaconda3/bin/python3.6
+55f8b9f7d000-55f8b9fae000 rw-p 00000000 00:00 0 
+55f8ba755000-55f8bb7ae000 rw-p 00000000 00:00 0                          [heap]
+7f5be8000000-7f5be8021000 rw-p 00000000 00:00 0 
+7f5be8021000-7f5bec000000 ---p 00000000 00:00 0 
+7f5bf0000000-7f5bf0021000 rw-p 00000000 00:00 0 
+7f5bf0021000-7f5bf4000000 ---p 00000000 00:00 0 
+7f5bf4000000-7f5bf4021000 rw-p 00000000 00:00 0 
+7f5bf4021000-7f5bf8000000 ---p 00000000 00:00 0 
+7f5bf8000000-7f5bf8021000 rw-p 00000000 00:00 0 
+7f5bf8021000-7f5bfc000000 ---p 00000000 00:00 0 
+7f5bfc000000-7f5bfc021000 rw-p 00000000 00:00 0 
+7f5bfc021000-7f5c00000000 ---p 00000000 00:00 0 
+7f5c00000000-7f5c00021000 rw-p 00000000 00:00 0 
+7f5c00021000-7f5c04000000 ---p 00000000 00:00 0 
+7f5c04000000-7f5c04090000 rw-p 00000000 00:00 0 
+7f5c04090000-7f5c08000000 ---p 00000000 00:00 0 
+7f5c08000000-7f5c08021000 rw-p 00000000 00:00 0 
+7f5c08021000-7f5c0c000000 ---p 00000000 00:00 0 
+7f5c0c000000-7f5c0c042000 rw-p 00000000 00:00 0 
+7f5c0c042000-7f5c10000000 ---p 00000000 00:00 0 
+7f5c10000000-7f5c10021000 rw-p 00000000 00:00 0 
+7f5c10021000-7f5c14000000 ---p 00000000 00:00 0 
+7f5c14000000-7f5c14021000 rw-p 00000000 00:00 0 
+7f5c14021000-7f5c18000000 ---p 00000000 00:00 0 
+7f5c18000000-7f5c18021000 rw-p 00000000 00:00 0 
+7f5c18021000-7f5c1c000000 ---p 00000000 00:00 0 
+7f5c1c000000-7f5c1c021000 rw-p 00000000 00:00 0 
+7f5c1c021000-7f5c20000000 ---p 00000000 00:00 0 
+7f5c20000000-7f5c20021000 rw-p 00000000 00:00 0 
+7f5c20021000-7f5c24000000 ---p 00000000 00:00 0 
+7f5c277ff000-7f5c27800000 ---p 00000000 00:00 0 
+7f5c27800000-7f5c28000000 rw-p 00000000 00:00 0 
+7f5c28000000-7f5c28021000 rw-p 00000000 00:00 0 
+7f5c28021000-7f5c2c000000 ---p 00000000 00:00 0 
+7f5c2c196000-7f5c2c197000 ---p 00000000 00:00 0 
+7f5c2c197000-7f5c2c997000 rw-p 00000000 00:00 0 
+7f5c2c997000-7f5c2c99a000 ---p 00000000 00:00 0 
+7f5c2c99a000-7f5c2ca98000 rw-p 00000000 00:00 0 
+7f5c2ca98000-7f5c2ca99000 ---p 00000000 00:00 0 
+7f5c2ca99000-7f5c2cb99000 rw-p 00000000 00:00 0 
+7f5c2cb99000-7f5c2cb9c000 ---p 00000000 00:00 0 
+7f5c2cb9c000-7f5c2cc9a000 rw-p 00000000 00:00 0 
+7f5c2cc9a000-7f5c2cc9d000 ---p 00000000 00:00 0 
+7f5c2cc9d000-7f5c2cd9b000 rw-p 00000000 00:00 0 
+7f5c2cd9b000-7f5c2cd9e000 ---p 00000000 00:00 0 
+7f5c2cd9e000-7f5c2ce9c000 rw-p 00000000 00:00 0 
+7f5c2ce9c000-7f5c2ce9f000 ---p 00000000 00:00 0 
+7f5c2ce9f000-7f5c2cf9d000 rw-p 00000000 00:00 0 
+7f5c2cf9d000-7f5c2cfa0000 ---p 00000000 00:00 0 
+7f5c2cfa0000-7f5c2d09e000 rw-p 00000000 00:00 0 
+7f5c2d09e000-7f5c2d0a1000 ---p 00000000 00:00 0 
+7f5c2d0a1000-7f5c2d19f000 rw-p 00000000 00:00 0 
+7f5c2d19f000-7f5c2d1a2000 ---p 00000000 00:00 0 
+7f5c2d1a2000-7f5c2d2a0000 rw-p 00000000 00:00 0 
+7f5c2d2a0000-7f5c2d2a1000 ---p 00000000 00:00 0 
+7f5c2d2a1000-7f5c30000000 rw-p 00000000 00:00 0 
+7f5c30000000-7f5c30021000 rw-p 00000000 00:00 0 
+7f5c30021000-7f5c34000000 ---p 00000000 00:00 0 
+7f5c34032000-7f5c340c8000 r--s 0110a000 08:01 29754493                   /usr/lib/jvm/jdk1.8.0_161/jre/lib/ext/jfxrt.jar
+7f5c340c8000-7f5c342a1000 r--s 03d64000 08:01 29491824                   /usr/lib/jvm/jdk1.8.0_161/jre/lib/rt.jar
+7f5c342a1000-7f5c346e1000 rw-p 00000000 00:00 0 
+7f5c346e1000-7f5c34aa1000 ---p 00000000 00:00 0 
+7f5c34aa1000-7f5c34c76000 rw-p 00000000 00:00 0 
+7f5c34c76000-7f5c34c77000 ---p 00000000 00:00 0 
+7f5c34c77000-7f5c34d77000 rw-p 00000000 00:00 0 
+7f5c34d77000-7f5c34d78000 ---p 00000000 00:00 0 
+7f5c34d78000-7f5c34e78000 rw-p 00000000 00:00 0 
+7f5c34e78000-7f5c34e79000 ---p 00000000 00:00 0 
+7f5c34e79000-7f5c34f79000 rw-p 00000000 00:00 0 
+7f5c34f79000-7f5c34f7a000 ---p 00000000 00:00 0 
+7f5c34f7a000-7f5c3508e000 rw-p 00000000 00:00 0 
+7f5c3508e000-7f5c351b3000 ---p 00000000 00:00 0 
+7f5c351b3000-7f5c351c7000 rw-p 00000000 00:00 0 
+7f5c351c7000-7f5c352eb000 ---p 00000000 00:00 0 
+7f5c352eb000-7f5c352f6000 rw-p 00000000 00:00 0 
+7f5c352f6000-7f5c35388000 ---p 00000000 00:00 0 
+7f5c35388000-7f5c35393000 rw-p 00000000 00:00 0 
+7f5c35393000-7f5c35749000 ---p 00000000 00:00 0 
+7f5c35749000-7f5c359b9000 rwxp 00000000 00:00 0 
+7f5c359b9000-7f5c44749000 ---p 00000000 00:00 0 
+7f5c44749000-7f5c44764000 r-xp 00000000 08:01 29756544                   /usr/lib/jvm/jdk1.8.0_161/jre/lib/amd64/libzip.so
+7f5c44764000-7f5c44964000 ---p 0001b000 08:01 29756544                   /usr/lib/jvm/jdk1.8.0_161/jre/lib/amd64/libzip.so
+7f5c44964000-7f5c44965000 rw-p 0001b000 08:01 29756544                   /usr/lib/jvm/jdk1.8.0_161/jre/lib/amd64/libzip.so
+7f5c44965000-7f5c44970000 r-xp 00000000 08:01 29496288                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f5c44970000-7f5c44b6f000 ---p 0000b000 08:01 29496288                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f5c44b6f000-7f5c44b70000 r--p 0000a000 08:01 29496288                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f5c44b70000-7f5c44b71000 rw-p 0000b000 08:01 29496288                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f5c44b71000-7f5c44b77000 rw-p 00000000 00:00 0 
+7f5c44b77000-7f5c44b82000 r-xp 00000000 08:01 29496292                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f5c44b82000-7f5c44d81000 ---p 0000b000 08:01 29496292                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f5c44d81000-7f5c44d82000 r--p 0000a000 08:01 29496292                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f5c44d82000-7f5c44d83000 rw-p 0000b000 08:01 29496292                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f5c44d83000-7f5c44d99000 r-xp 00000000 08:01 29496272                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f5c44d99000-7f5c44f98000 ---p 00016000 08:01 29496272                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f5c44f98000-7f5c44f99000 r--p 00015000 08:01 29496272                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f5c44f99000-7f5c44f9a000 rw-p 00016000 08:01 29496272                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f5c44f9a000-7f5c44f9c000 rw-p 00000000 00:00 0 
+7f5c44f9c000-7f5c44fa4000 r-xp 00000000 08:01 29496283                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f5c44fa4000-7f5c451a3000 ---p 00008000 08:01 29496283                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f5c451a3000-7f5c451a4000 r--p 00007000 08:01 29496283                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f5c451a4000-7f5c451a5000 rw-p 00008000 08:01 29496283                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f5c451a5000-7f5c451d0000 r-xp 00000000 08:01 29755210                   /usr/lib/jvm/jdk1.8.0_161/jre/lib/amd64/libjava.so
+7f5c451d0000-7f5c453cf000 ---p 0002b000 08:01 29755210                   /usr/lib/jvm/jdk1.8.0_161/jre/lib/amd64/libjava.so
+7f5c453cf000-7f5c453d1000 rw-p 0002a000 08:01 29755210                   /usr/lib/jvm/jdk1.8.0_161/jre/lib/amd64/libjava.so
+7f5c453d1000-7f5c453de000 r-xp 00000000 08:01 29756465                   /usr/lib/jvm/jdk1.8.0_161/jre/lib/amd64/libverify.so
+7f5c453de000-7f5c455de000 ---p 0000d000 08:01 29756465                   /usr/lib/jvm/jdk1.8.0_161/jre/lib/amd64/libverify.so
+7f5c455de000-7f5c455e0000 rw-p 0000d000 08:01 29756465                   /usr/lib/jvm/jdk1.8.0_161/jre/lib/amd64/libverify.so
+7f5c455e0000-7f5c462b9000 r-xp 00000000 08:01 29754724                   /usr/lib/jvm/jdk1.8.0_161/jre/lib/amd64/server/libjvm.so
+7f5c462b9000-7f5c464b8000 ---p 00cd9000 08:01 29754724                   /usr/lib/jvm/jdk1.8.0_161/jre/lib/amd64/server/libjvm.so
+7f5c464b8000-7f5c46591000 rw-p 00cd8000 08:01 29754724                   /usr/lib/jvm/jdk1.8.0_161/jre/lib/amd64/server/libjvm.so
+7f5c46591000-7f5c4669d000 rw-p 00000000 00:00 0 
+7f5c4669d000-7f5c46757000 r-xp 00000000 08:01 43780383                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+7f5c46757000-7f5c46956000 ---p 000ba000 08:01 43780383                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+7f5c46956000-7f5c46957000 r--p 000b9000 08:01 43780383                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+7f5c46957000-7f5c4697b000 rw-p 000ba000 08:01 43780383                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+7f5c4697b000-7f5c469bc000 rw-p 00000000 00:00 0 
+7f5c469bc000-7f5c469c5000 r-xp 00000000 08:01 43780298                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/fft/fftpack_lite.cpython-36m-x86_64-linux-gnu.so
+7f5c469c5000-7f5c46bc4000 ---p 00009000 08:01 43780298                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/fft/fftpack_lite.cpython-36m-x86_64-linux-gnu.so
+7f5c46bc4000-7f5c46bc5000 r--p 00008000 08:01 43780298                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/fft/fftpack_lite.cpython-36m-x86_64-linux-gnu.so
+7f5c46bc5000-7f5c46bc6000 rw-p 00009000 08:01 43780298                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/fft/fftpack_lite.cpython-36m-x86_64-linux-gnu.so
+7f5c46bc6000-7f5c46bec000 r-xp 00000000 08:01 43780375                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+7f5c46bec000-7f5c46deb000 ---p 00026000 08:01 43780375                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+7f5c46deb000-7f5c46dec000 r--p 00025000 08:01 43780375                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+7f5c46dec000-7f5c46ded000 rw-p 00026000 08:01 43780375                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+7f5c46ded000-7f5c46df0000 r-xp 00000000 08:01 43780229                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+7f5c46df0000-7f5c46ff0000 ---p 00003000 08:01 43780229                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+7f5c46ff0000-7f5c46ff1000 r--p 00003000 08:01 43780229                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+7f5c46ff1000-7f5c46ff2000 rw-p 00004000 08:01 43780229                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+7f5c46ff2000-7f5c47140000 r-xp 00000000 08:01 43780384                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/core/umath.cpython-36m-x86_64-linux-gnu.so
+7f5c47140000-7f5c47340000 ---p 0014e000 08:01 43780384                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/core/umath.cpython-36m-x86_64-linux-gnu.so
+7f5c47340000-7f5c47341000 r--p 0014e000 08:01 43780384                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/core/umath.cpython-36m-x86_64-linux-gnu.so
+7f5c47341000-7f5c47346000 rw-p 0014f000 08:01 43780384                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/core/umath.cpython-36m-x86_64-linux-gnu.so
+7f5c47346000-7f5c47348000 rw-p 00000000 00:00 0 
+7f5c47348000-7f5c477a1000 r-xp 00000000 08:01 43384989                   /home/buerliu/anaconda3/lib/libmkl_rt.so
+7f5c477a1000-7f5c479a1000 ---p 00459000 08:01 43384989                   /home/buerliu/anaconda3/lib/libmkl_rt.so
+7f5c479a1000-7f5c479a7000 r--p 00459000 08:01 43384989                   /home/buerliu/anaconda3/lib/libmkl_rt.so
+7f5c479a7000-7f5c479a9000 rw-p 0045f000 08:01 43384989                   /home/buerliu/anaconda3/lib/libmkl_rt.so
+7f5c479a9000-7f5c479bb000 rw-p 00000000 00:00 0 
+7f5c479bb000-7f5c47b4f000 r-xp 00000000 08:01 43780385                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/core/multiarray.cpython-36m-x86_64-linux-gnu.so
+7f5c47b4f000-7f5c47d4e000 ---p 00194000 08:01 43780385                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/core/multiarray.cpython-36m-x86_64-linux-gnu.so
+7f5c47d4e000-7f5c47d51000 r--p 00193000 08:01 43780385                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/core/multiarray.cpython-36m-x86_64-linux-gnu.so
+7f5c47d51000-7f5c47d5e000 rw-p 00196000 08:01 43780385                   /home/buerliu/anaconda3/lib/python3.6/site-packages/numpy/core/multiarray.cpython-36m-x86_64-linux-gnu.so
+7f5c47d5e000-7f5c47d71000 rw-p 00000000 00:00 0 
+7f5c47d71000-7f5c47dfa000 r-xp 00000000 08:01 43261654                   /home/buerliu/anaconda3/lib/python3.6/site-packages/_jpype.cpython-36m-x86_64-linux-gnu.so
+7f5c47dfa000-7f5c47ffa000 ---p 00089000 08:01 43261654                   /home/buerliu/anaconda3/lib/python3.6/site-packages/_jpype.cpython-36m-x86_64-linux-gnu.so
+7f5c47ffa000-7f5c48000000 rw-p 00089000 08:01 43261654                   /home/buerliu/anaconda3/lib/python3.6/site-packages/_jpype.cpython-36m-x86_64-linux-gnu.so
+7f5c48000000-7f5c48021000 rw-p 00000000 00:00 0 
+7f5c48021000-7f5c4c000000 ---p 00000000 00:00 0 
+7f5c4c000000-7f5c4c021000 rw-p 00000000 00:00 0 
+7f5c4c021000-7f5c50000000 ---p 00000000 00:00 0 
+7f5c50000000-7f5c50021000 rw-p 00000000 00:00 0 
+7f5c50021000-7f5c54000000 ---p 00000000 00:00 0 
+7f5c54003000-7f5c54183000 rw-p 00000000 00:00 0 
+7f5c54183000-7f5c54184000 ---p 00000000 00:00 0 
+7f5c54184000-7f5c54984000 rw-p 00000000 00:00 0 
+7f5c54984000-7f5c54985000 ---p 00000000 00:00 0 
+7f5c54985000-7f5c55185000 rw-p 00000000 00:00 0 
+7f5c55185000-7f5c55186000 ---p 00000000 00:00 0 
+7f5c55186000-7f5c55986000 rw-p 00000000 00:00 0 
+7f5c55986000-7f5c559a2000 r-xp 00000000 08:01 44171881                   /home/buerliu/anaconda3/lib/python3.6/site-packages/sip.so
+7f5c559a2000-7f5c55ba1000 ---p 0001c000 08:01 44171881                   /home/buerliu/anaconda3/lib/python3.6/site-packages/sip.so
+7f5c55ba1000-7f5c55ba2000 r--p 0001b000 08:01 44171881                   /home/buerliu/anaconda3/lib/python3.6/site-packages/sip.so
+7f5c55ba2000-7f5c55ba4000 rw-p 0001c000 08:01 44171881                   /home/buerliu/anaconda3/lib/python3.6/site-packages/sip.so
+7f5c55ba4000-7f5c55be8000 r-xp 00000000 08:01 43392226                   /home/buerliu/anaconda3/lib/libpcre.so.1.2.9
+7f5c55be8000-7f5c55de7000 ---p 00044000 08:01 43392226                   /home/buerliu/anaconda3/lib/libpcre.so.1.2.9
+7f5c55de7000-7f5c55de8000 r--p 00043000 08:01 43392226                   /home/buerliu/anaconda3/lib/libpcre.so.1.2.9
+7f5c55de8000-7f5c55de9000 rw-p 00044000 08:01 43392226                   /home/buerliu/anaconda3/lib/libpcre.so.1.2.9
+7f5c55de9000-7f5c55ef9000 r-xp 00000000 08:01 43258561                   /home/buerliu/anaconda3/lib/libglib-2.0.so.0.5306.0
+7f5c55ef9000-7f5c560f9000 ---p 00110000 08:01 43258561                   /home/buerliu/anaconda3/lib/libglib-2.0.so.0.5306.0
+7f5c560f9000-7f5c560fa000 r--p 00110000 08:01 43258561                   /home/buerliu/anaconda3/lib/libglib-2.0.so.0.5306.0
+7f5c560fa000-7f5c560fb000 rw-p 00111000 08:01 43258561                   /home/buerliu/anaconda3/lib/libglib-2.0.so.0.5306.0
+7f5c560fb000-7f5c560fc000 rw-p 00000000 00:00 0 
+7f5c560fc000-7f5c560fd000 r-xp 00000000 08:01 43258573                   /home/buerliu/anaconda3/lib/libgthread-2.0.so.0.5306.0
+7f5c560fd000-7f5c562fc000 ---p 00001000 08:01 43258573                   /home/buerliu/anaconda3/lib/libgthread-2.0.so.0.5306.0
+7f5c562fc000-7f5c562fd000 r--p 00000000 08:01 43258573                   /home/buerliu/anaconda3/lib/libgthread-2.0.so.0.5306.0
+7f5c562fd000-7f5c562fe000 rw-p 00001000 08:01 43258573                   /home/buerliu/anaconda3/lib/libgthread-2.0.so.0.5306.0
+7f5c562fe000-7f5c57bfe000 r--p 00000000 08:01 43257586                   /home/buerliu/anaconda3/lib/libicudata.so.58.2
+7f5c57bfe000-7f5c57dfd000 ---p 01900000 08:01 43257586                   /home/buerliu/anaconda3/lib/libicudata.so.58.2
+7f5c57dfd000-7f5c57dfe000 r--p 018ff000 08:01 43257586                   /home/buerliu/anaconda3/lib/libicudata.so.58.2
+7f5c57dfe000-7f5c57f99000 r-xp 00000000 08:01 43257575                   /home/buerliu/anaconda3/lib/libicuuc.so.58.2
+7f5c57f99000-7f5c58198000 ---p 0019b000 08:01 43257575                   /home/buerliu/anaconda3/lib/libicuuc.so.58.2
+7f5c58198000-7f5c581aa000 r--p 0019a000 08:01 43257575                   /home/buerliu/anaconda3/lib/libicuuc.so.58.2
+7f5c581aa000-7f5c581ab000 rw-p 001ac000 08:01 43257575                   /home/buerliu/anaconda3/lib/libicuuc.so.58.2
+7f5c581ab000-7f5c581ac000 rw-p 00000000 00:00 0 
+7f5c581ac000-7f5c58413000 r-xp 00000000 08:01 43257579                   /home/buerliu/anaconda3/lib/libicui18n.so.58.2
+7f5c58413000-7f5c58612000 ---p 00267000 08:01 43257579                   /home/buerliu/anaconda3/lib/libicui18n.so.58.2
+7f5c58612000-7f5c58620000 r--p 00266000 08:01 43257579                   /home/buerliu/anaconda3/lib/libicui18n.so.58.2
+7f5c58620000-7f5c58621000 rw-p 00274000 08:01 43257579                   /home/buerliu/anaconda3/lib/libicui18n.so.58.2
+7f5c58621000-7f5c58632000 r-xp 00000000 08:01 43256945                   /home/buerliu/anaconda3/lib/libgcc_s.so.1
+7f5c58632000-7f5c58831000 ---p 00011000 08:01 43256945                   /home/buerliu/anaconda3/lib/libgcc_s.so.1
+7f5c58831000-7f5c58832000 r--p 00010000 08:01 43256945                   /home/buerliu/anaconda3/lib/libgcc_s.so.1
+7f5c58832000-7f5c58833000 rw-p 00011000 08:01 43256945                   /home/buerliu/anaconda3/lib/libgcc_s.so.1
+7f5c58833000-7f5c5895d000 r-xp 00000000 08:01 43257093                   /home/buerliu/anaconda3/lib/libstdc++.so.6.0.24
+7f5c5895d000-7f5c58b5c000 ---p 0012a000 08:01 43257093                   /home/buerliu/anaconda3/lib/libstdc++.so.6.0.24
+7f5c58b5c000-7f5c58b66000 r--p 00129000 08:01 43257093                   /home/buerliu/anaconda3/lib/libstdc++.so.6.0.24
+7f5c58b66000-7f5c58b6a000 rw-p 00133000 08:01 43257093                   /home/buerliu/anaconda3/lib/libstdc++.so.6.0.24
+7f5c58b6a000-7f5c58b6d000 rw-p 00000000 00:00 0 
+7f5c58b6d000-7f5c5907e000 r-xp 00000000 08:01 43259035                   /home/buerliu/anaconda3/lib/libQt5Core.so.5.6.2
+7f5c5907e000-7f5c5927e000 ---p 00511000 08:01 43259035                   /home/buerliu/anaconda3/lib/libQt5Core.so.5.6.2
+7f5c5927e000-7f5c5928a000 r--p 00511000 08:01 43259035                   /home/buerliu/anaconda3/lib/libQt5Core.so.5.6.2
+7f5c5928a000-7f5c5928b000 rw-p 0051d000 08:01 43259035                   /home/buerliu/anaconda3/lib/libQt5Core.so.5.6.2
+7f5c5928b000-7f5c5928f000 rw-p 00000000 00:00 0 
+7f5c5928f000-7f5c594d8000 r-xp 00000000 08:01 44435988                   /home/buerliu/anaconda3/lib/python3.6/site-packages/PyQt5/QtCore.so
+7f5c594d8000-7f5c596d7000 ---p 00249000 08:01 44435988                   /home/buerliu/anaconda3/lib/python3.6/site-packages/PyQt5/QtCore.so
+7f5c596d7000-7f5c596db000 r--p 00248000 08:01 44435988                   /home/buerliu/anaconda3/lib/python3.6/site-packages/PyQt5/QtCore.so
+7f5c596db000-7f5c59741000 rw-p 0024c000 08:01 44435988                   /home/buerliu/anaconda3/lib/python3.6/site-packages/PyQt5/QtCore.so
+7f5c59741000-7f5c59941000 rw-p 00000000 00:00 0 
+7f5c59941000-7f5c59946000 r-xp 00000000 08:01 43256466                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_lsprof.cpython-36m-x86_64-linux-gnu.so
+7f5c59946000-7f5c59b45000 ---p 00005000 08:01 43256466                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_lsprof.cpython-36m-x86_64-linux-gnu.so
+7f5c59b45000-7f5c59b46000 r--p 00004000 08:01 43256466                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_lsprof.cpython-36m-x86_64-linux-gnu.so
+7f5c59b46000-7f5c59b47000 rw-p 00005000 08:01 43256466                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_lsprof.cpython-36m-x86_64-linux-gnu.so
+7f5c59b47000-7f5c59c87000 rw-p 00000000 00:00 0 
+7f5c59c87000-7f5c59c8b000 r-xp 00000000 08:01 29495923                   /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f5c59c8b000-7f5c59e8a000 ---p 00004000 08:01 29495923                   /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f5c59e8a000-7f5c59e8b000 r--p 00003000 08:01 29495923                   /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f5c59e8b000-7f5c59e8c000 rw-p 00004000 08:01 29495923                   /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f5c59e8c000-7f5c59ecc000 rw-p 00000000 00:00 0 
+7f5c59ecc000-7f5c59ed4000 r-xp 00000000 08:01 43256572                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+7f5c59ed4000-7f5c5a0d3000 ---p 00008000 08:01 43256572                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+7f5c5a0d3000-7f5c5a0d4000 r--p 00007000 08:01 43256572                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+7f5c5a0d4000-7f5c5a0d6000 rw-p 00008000 08:01 43256572                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+7f5c5a0d6000-7f5c5a14e000 r-xp 00000000 08:01 43516516                   /home/buerliu/anaconda3/lib/libtiff.so.5.2.6
+7f5c5a14e000-7f5c5a34d000 ---p 00078000 08:01 43516516                   /home/buerliu/anaconda3/lib/libtiff.so.5.2.6
+7f5c5a34d000-7f5c5a351000 r--p 00077000 08:01 43516516                   /home/buerliu/anaconda3/lib/libtiff.so.5.2.6
+7f5c5a351000-7f5c5a352000 rw-p 0007b000 08:01 43516516                   /home/buerliu/anaconda3/lib/libtiff.so.5.2.6
+7f5c5a352000-7f5c5a38d000 r-xp 00000000 08:01 43257688                   /home/buerliu/anaconda3/lib/libjpeg.so.9.2.0
+7f5c5a38d000-7f5c5a58c000 ---p 0003b000 08:01 43257688                   /home/buerliu/anaconda3/lib/libjpeg.so.9.2.0
+7f5c5a58c000-7f5c5a58d000 r--p 0003a000 08:01 43257688                   /home/buerliu/anaconda3/lib/libjpeg.so.9.2.0
+7f5c5a58d000-7f5c5a58e000 rw-p 0003b000 08:01 43257688                   /home/buerliu/anaconda3/lib/libjpeg.so.9.2.0
+7f5c5a58e000-7f5c5a5f0000 r-xp 00000000 08:01 44435128                   /home/buerliu/anaconda3/lib/python3.6/site-packages/PIL/_imaging.cpython-36m-x86_64-linux-gnu.so
+7f5c5a5f0000-7f5c5a7ef000 ---p 00062000 08:01 44435128                   /home/buerliu/anaconda3/lib/python3.6/site-packages/PIL/_imaging.cpython-36m-x86_64-linux-gnu.so
+7f5c5a7ef000-7f5c5a7f3000 r--p 00061000 08:01 44435128                   /home/buerliu/anaconda3/lib/python3.6/site-packages/PIL/_imaging.cpython-36m-x86_64-linux-gnu.so
+7f5c5a7f3000-7f5c5a7f6000 rw-p 00065000 08:01 44435128                   /home/buerliu/anaconda3/lib/python3.6/site-packages/PIL/_imaging.cpython-36m-x86_64-linux-gnu.so
+7f5c5a7f6000-7f5c5a876000 rw-p 00000000 00:00 0 
+7f5c5a8a1000-7f5c5aca1000 rw-p 00000000 00:00 0 
+7f5c5aca1000-7f5c5acae000 r-xp 00000000 08:01 43256637                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_asyncio.cpython-36m-x86_64-linux-gnu.so
+7f5c5acae000-7f5c5aead000 ---p 0000d000 08:01 43256637                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_asyncio.cpython-36m-x86_64-linux-gnu.so
+7f5c5aead000-7f5c5aeae000 r--p 0000c000 08:01 43256637                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_asyncio.cpython-36m-x86_64-linux-gnu.so
+7f5c5aeae000-7f5c5aeb1000 rw-p 0000d000 08:01 43256637                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_asyncio.cpython-36m-x86_64-linux-gnu.so
+7f5c5aeb1000-7f5c5aeb4000 r-xp 00000000 08:01 43256417                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_multiprocessing.cpython-36m-x86_64-linux-gnu.so
+7f5c5aeb4000-7f5c5b0b4000 ---p 00003000 08:01 43256417                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_multiprocessing.cpython-36m-x86_64-linux-gnu.so
+7f5c5b0b4000-7f5c5b0b5000 r--p 00003000 08:01 43256417                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_multiprocessing.cpython-36m-x86_64-linux-gnu.so
+7f5c5b0b5000-7f5c5b0b6000 rw-p 00004000 08:01 43256417                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_multiprocessing.cpython-36m-x86_64-linux-gnu.so
+7f5c5b0b6000-7f5c5b176000 rw-p 00000000 00:00 0 
+7f5c5b176000-7f5c5b421000 r-xp 00000000 08:01 43256731                   /home/buerliu/anaconda3/lib/libpython3.6m.so.1.0
+7f5c5b421000-7f5c5b620000 ---p 002ab000 08:01 43256731                   /home/buerliu/anaconda3/lib/libpython3.6m.so.1.0
+7f5c5b620000-7f5c5b626000 r--p 002aa000 08:01 43256731                   /home/buerliu/anaconda3/lib/libpython3.6m.so.1.0
+7f5c5b626000-7f5c5b689000 rw-p 002b0000 08:01 43256731                   /home/buerliu/anaconda3/lib/libpython3.6m.so.1.0
+7f5c5b689000-7f5c5b6ba000 rw-p 00000000 00:00 0 
+7f5c5b6ba000-7f5c5b6bc000 r-xp 00000000 08:01 43779066                   /home/buerliu/anaconda3/lib/python3.6/site-packages/markupsafe/_speedups.cpython-36m-x86_64-linux-gnu.so
+7f5c5b6bc000-7f5c5b8bb000 ---p 00002000 08:01 43779066                   /home/buerliu/anaconda3/lib/python3.6/site-packages/markupsafe/_speedups.cpython-36m-x86_64-linux-gnu.so
+7f5c5b8bb000-7f5c5b8bc000 r--p 00001000 08:01 43779066                   /home/buerliu/anaconda3/lib/python3.6/site-packages/markupsafe/_speedups.cpython-36m-x86_64-linux-gnu.so
+7f5c5b8bc000-7f5c5b8bd000 rw-p 00002000 08:01 43779066                   /home/buerliu/anaconda3/lib/python3.6/site-packages/markupsafe/_speedups.cpython-36m-x86_64-linux-gnu.so
+7f5c5b8bd000-7f5c5babd000 rw-p 00000000 00:00 0 
+7f5c5babd000-7f5c5bb7e000 r-xp 00000000 08:01 43256696                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/unicodedata.cpython-36m-x86_64-linux-gnu.so
+7f5c5bb7e000-7f5c5bd7e000 ---p 000c1000 08:01 43256696                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/unicodedata.cpython-36m-x86_64-linux-gnu.so
+7f5c5bd7e000-7f5c5bd7f000 r--p 000c1000 08:01 43256696                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/unicodedata.cpython-36m-x86_64-linux-gnu.so
+7f5c5bd7f000-7f5c5bd9a000 rw-p 000c2000 08:01 43256696                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/unicodedata.cpython-36m-x86_64-linux-gnu.so
+7f5c5bd9a000-7f5c5bdda000 rw-p 00000000 00:00 0 
+7f5c5bdda000-7f5c5bde8000 r-xp 00000000 08:01 43256638                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/array.cpython-36m-x86_64-linux-gnu.so
+7f5c5bde8000-7f5c5bfe7000 ---p 0000e000 08:01 43256638                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/array.cpython-36m-x86_64-linux-gnu.so
+7f5c5bfe7000-7f5c5bfe8000 r--p 0000d000 08:01 43256638                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/array.cpython-36m-x86_64-linux-gnu.so
+7f5c5bfe8000-7f5c5bfeb000 rw-p 0000e000 08:01 43256638                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/array.cpython-36m-x86_64-linux-gnu.so
+7f5c5bfeb000-7f5c5c32c000 rw-p 00000000 00:00 0 
+7f5c5c32c000-7f5c5c3fc000 r-xp 00000000 08:01 43517686                   /home/buerliu/anaconda3/lib/libsqlite3.so.0.8.6
+7f5c5c3fc000-7f5c5c5fc000 ---p 000d0000 08:01 43517686                   /home/buerliu/anaconda3/lib/libsqlite3.so.0.8.6
+7f5c5c5fc000-7f5c5c5ff000 r--p 000d0000 08:01 43517686                   /home/buerliu/anaconda3/lib/libsqlite3.so.0.8.6
+7f5c5c5ff000-7f5c5c601000 rw-p 000d3000 08:01 43517686                   /home/buerliu/anaconda3/lib/libsqlite3.so.0.8.6
+7f5c5c601000-7f5c5c602000 rw-p 00000000 00:00 0 
+7f5c5c602000-7f5c5c616000 r-xp 00000000 08:01 43256665                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_sqlite3.cpython-36m-x86_64-linux-gnu.so
+7f5c5c616000-7f5c5c816000 ---p 00014000 08:01 43256665                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_sqlite3.cpython-36m-x86_64-linux-gnu.so
+7f5c5c816000-7f5c5c817000 r--p 00014000 08:01 43256665                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_sqlite3.cpython-36m-x86_64-linux-gnu.so
+7f5c5c817000-7f5c5c819000 rw-p 00015000 08:01 43256665                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_sqlite3.cpython-36m-x86_64-linux-gnu.so
+7f5c5c819000-7f5c5c999000 rw-p 00000000 00:00 0 
+7f5c5c999000-7f5c5c99c000 r-xp 00000000 08:01 43256322                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/resource.cpython-36m-x86_64-linux-gnu.so
+7f5c5c99c000-7f5c5cb9b000 ---p 00003000 08:01 43256322                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/resource.cpython-36m-x86_64-linux-gnu.so
+7f5c5cb9b000-7f5c5cb9c000 r--p 00002000 08:01 43256322                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/resource.cpython-36m-x86_64-linux-gnu.so
+7f5c5cb9c000-7f5c5cb9d000 rw-p 00003000 08:01 43256322                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/resource.cpython-36m-x86_64-linux-gnu.so
+7f5c5cb9d000-7f5c5cba1000 r-xp 00000000 08:01 43256477                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/termios.cpython-36m-x86_64-linux-gnu.so
+7f5c5cba1000-7f5c5cda1000 ---p 00004000 08:01 43256477                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/termios.cpython-36m-x86_64-linux-gnu.so
+7f5c5cda1000-7f5c5cda2000 r--p 00004000 08:01 43256477                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/termios.cpython-36m-x86_64-linux-gnu.so
+7f5c5cda2000-7f5c5cda4000 rw-p 00005000 08:01 43256477                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/termios.cpython-36m-x86_64-linux-gnu.so
+7f5c5cda4000-7f5c5d264000 rw-p 00000000 00:00 0 
+7f5c5d264000-7f5c5d26b000 r-xp 00000000 08:01 43257732                   /home/buerliu/anaconda3/lib/libffi.so.6.0.4
+7f5c5d26b000-7f5c5d46b000 ---p 00007000 08:01 43257732                   /home/buerliu/anaconda3/lib/libffi.so.6.0.4
+7f5c5d46b000-7f5c5d46c000 r--p 00007000 08:01 43257732                   /home/buerliu/anaconda3/lib/libffi.so.6.0.4
+7f5c5d46c000-7f5c5d46d000 rw-p 00008000 08:01 43257732                   /home/buerliu/anaconda3/lib/libffi.so.6.0.4
+7f5c5d46d000-7f5c5d48b000 r-xp 00000000 08:01 43256681                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+7f5c5d48b000-7f5c5d68b000 ---p 0001e000 08:01 43256681                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+7f5c5d68b000-7f5c5d68c000 r--p 0001e000 08:01 43256681                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+7f5c5d68c000-7f5c5d690000 rw-p 0001f000 08:01 43256681                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+7f5c5d690000-7f5c5d6a1000 r-xp 00000000 08:01 43256644                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+7f5c5d6a1000-7f5c5d8a1000 ---p 00011000 08:01 43256644                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+7f5c5d8a1000-7f5c5d8a2000 r--p 00011000 08:01 43256644                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+7f5c5d8a2000-7f5c5d8a3000 rw-p 00012000 08:01 43256644                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+7f5c5d8a3000-7f5c5d8bf000 r-xp 00000000 08:01 43256674                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_pickle.cpython-36m-x86_64-linux-gnu.so
+7f5c5d8bf000-7f5c5dabe000 ---p 0001c000 08:01 43256674                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_pickle.cpython-36m-x86_64-linux-gnu.so
+7f5c5dabe000-7f5c5dabf000 r--p 0001b000 08:01 43256674                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_pickle.cpython-36m-x86_64-linux-gnu.so
+7f5c5dabf000-7f5c5dac2000 rw-p 0001c000 08:01 43256674                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_pickle.cpython-36m-x86_64-linux-gnu.so
+7f5c5dac2000-7f5c5dbc2000 rw-p 00000000 00:00 0 
+7f5c5dbc2000-7f5c5dbc5000 r-xp 00000000 08:01 43256386                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/fcntl.cpython-36m-x86_64-linux-gnu.so
+7f5c5dbc5000-7f5c5ddc4000 ---p 00003000 08:01 43256386                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/fcntl.cpython-36m-x86_64-linux-gnu.so
+7f5c5ddc4000-7f5c5ddc5000 r--p 00002000 08:01 43256386                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/fcntl.cpython-36m-x86_64-linux-gnu.so
+7f5c5ddc5000-7f5c5ddc6000 rw-p 00003000 08:01 43256386                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/fcntl.cpython-36m-x86_64-linux-gnu.so
+7f5c5ddc6000-7f5c5ddc7000 r-xp 00000000 08:01 43256130                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+7f5c5ddc7000-7f5c5dfc7000 ---p 00001000 08:01 43256130                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+7f5c5dfc7000-7f5c5dfc8000 r--p 00001000 08:01 43256130                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+7f5c5dfc8000-7f5c5dfc9000 rw-p 00002000 08:01 43256130                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+7f5c5dfda000-7f5c5e0da000 rw-p 00000000 00:00 0 
+7f5c5e0da000-7f5c5e0dc000 r-xp 00000000 08:01 43256349                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/grp.cpython-36m-x86_64-linux-gnu.so
+7f5c5e0dc000-7f5c5e2dc000 ---p 00002000 08:01 43256349                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/grp.cpython-36m-x86_64-linux-gnu.so
+7f5c5e2dc000-7f5c5e2dd000 r--p 00002000 08:01 43256349                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/grp.cpython-36m-x86_64-linux-gnu.so
+7f5c5e2dd000-7f5c5e2de000 rw-p 00003000 08:01 43256349                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/grp.cpython-36m-x86_64-linux-gnu.so
+7f5c5e2de000-7f5c5e303000 r-xp 00000000 08:01 43393029                   /home/buerliu/anaconda3/lib/liblzma.so.5.2.3
+7f5c5e303000-7f5c5e502000 ---p 00025000 08:01 43393029                   /home/buerliu/anaconda3/lib/liblzma.so.5.2.3
+7f5c5e502000-7f5c5e503000 r--p 00024000 08:01 43393029                   /home/buerliu/anaconda3/lib/liblzma.so.5.2.3
+7f5c5e503000-7f5c5e504000 rw-p 00025000 08:01 43393029                   /home/buerliu/anaconda3/lib/liblzma.so.5.2.3
+7f5c5e504000-7f5c5e50b000 r-xp 00000000 08:01 43256575                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+7f5c5e50b000-7f5c5e70b000 ---p 00007000 08:01 43256575                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+7f5c5e70b000-7f5c5e70c000 r--p 00007000 08:01 43256575                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+7f5c5e70c000-7f5c5e70e000 rw-p 00008000 08:01 43256575                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+7f5c5e70e000-7f5c5e722000 r-xp 00000000 08:01 43256689                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+7f5c5e722000-7f5c5e921000 ---p 00014000 08:01 43256689                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+7f5c5e921000-7f5c5e922000 r--p 00013000 08:01 43256689                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+7f5c5e922000-7f5c5e924000 rw-p 00014000 08:01 43256689                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+7f5c5e924000-7f5c5e9a4000 rw-p 00000000 00:00 0 
+7f5c5e9a4000-7f5c5e9ab000 r-xp 00000000 08:01 43256548                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/zlib.cpython-36m-x86_64-linux-gnu.so
+7f5c5e9ab000-7f5c5ebaa000 ---p 00007000 08:01 43256548                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/zlib.cpython-36m-x86_64-linux-gnu.so
+7f5c5ebaa000-7f5c5ebab000 r--p 00006000 08:01 43256548                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/zlib.cpython-36m-x86_64-linux-gnu.so
+7f5c5ebab000-7f5c5ebad000 rw-p 00007000 08:01 43256548                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/zlib.cpython-36m-x86_64-linux-gnu.so
+7f5c5ebad000-7f5c5ebfc000 r-xp 00000000 08:01 43256691                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/pyexpat.cpython-36m-x86_64-linux-gnu.so
+7f5c5ebfc000-7f5c5edfb000 ---p 0004f000 08:01 43256691                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/pyexpat.cpython-36m-x86_64-linux-gnu.so
+7f5c5edfb000-7f5c5edfe000 r--p 0004e000 08:01 43256691                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/pyexpat.cpython-36m-x86_64-linux-gnu.so
+7f5c5edfe000-7f5c5ee00000 rw-p 00051000 08:01 43256691                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/pyexpat.cpython-36m-x86_64-linux-gnu.so
+7f5c5ee00000-7f5c5ee6c000 r-xp 00000000 08:01 43390898                   /home/buerliu/anaconda3/lib/libssl.so.1.0.0
+7f5c5ee6c000-7f5c5f06b000 ---p 0006c000 08:01 43390898                   /home/buerliu/anaconda3/lib/libssl.so.1.0.0
+7f5c5f06b000-7f5c5f070000 r--p 0006b000 08:01 43390898                   /home/buerliu/anaconda3/lib/libssl.so.1.0.0
+7f5c5f070000-7f5c5f076000 rw-p 00070000 08:01 43390898                   /home/buerliu/anaconda3/lib/libssl.so.1.0.0
+7f5c5f076000-7f5c5f090000 r-xp 00000000 08:01 43256676                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_ssl.cpython-36m-x86_64-linux-gnu.so
+7f5c5f090000-7f5c5f28f000 ---p 0001a000 08:01 43256676                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_ssl.cpython-36m-x86_64-linux-gnu.so
+7f5c5f28f000-7f5c5f290000 r--p 00019000 08:01 43256676                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_ssl.cpython-36m-x86_64-linux-gnu.so
+7f5c5f290000-7f5c5f295000 rw-p 0001a000 08:01 43256676                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_ssl.cpython-36m-x86_64-linux-gnu.so
+7f5c5f295000-7f5c5f355000 rw-p 00000000 00:00 0 
+7f5c5f355000-7f5c5f359000 r-xp 00000000 08:01 43256403                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_random.cpython-36m-x86_64-linux-gnu.so
+7f5c5f359000-7f5c5f558000 ---p 00004000 08:01 43256403                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_random.cpython-36m-x86_64-linux-gnu.so
+7f5c5f558000-7f5c5f559000 r--p 00003000 08:01 43256403                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_random.cpython-36m-x86_64-linux-gnu.so
+7f5c5f559000-7f5c5f55a000 rw-p 00004000 08:01 43256403                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_random.cpython-36m-x86_64-linux-gnu.so
+7f5c5f55a000-7f5c5f55c000 r-xp 00000000 08:01 43256269                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_bisect.cpython-36m-x86_64-linux-gnu.so
+7f5c5f55c000-7f5c5f75b000 ---p 00002000 08:01 43256269                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_bisect.cpython-36m-x86_64-linux-gnu.so
+7f5c5f75b000-7f5c5f75c000 r--p 00001000 08:01 43256269                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_bisect.cpython-36m-x86_64-linux-gnu.so
+7f5c5f75c000-7f5c5f75d000 rw-p 00002000 08:01 43256269                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_bisect.cpython-36m-x86_64-linux-gnu.so
+7f5c5f75d000-7f5c5f773000 r-xp 00000000 08:01 43256662                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_sha3.cpython-36m-x86_64-linux-gnu.so
+7f5c5f773000-7f5c5f972000 ---p 00016000 08:01 43256662                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_sha3.cpython-36m-x86_64-linux-gnu.so
+7f5c5f972000-7f5c5f973000 r--p 00015000 08:01 43256662                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_sha3.cpython-36m-x86_64-linux-gnu.so
+7f5c5f973000-7f5c5f975000 rw-p 00016000 08:01 43256662                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_sha3.cpython-36m-x86_64-linux-gnu.so
+7f5c5f975000-7f5c5f981000 r-xp 00000000 08:01 43256609                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_blake2.cpython-36m-x86_64-linux-gnu.so
+7f5c5f981000-7f5c5fb81000 ---p 0000c000 08:01 43256609                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_blake2.cpython-36m-x86_64-linux-gnu.so
+7f5c5fb81000-7f5c5fb82000 r--p 0000c000 08:01 43256609                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_blake2.cpython-36m-x86_64-linux-gnu.so
+7f5c5fb82000-7f5c5fb83000 rw-p 0000d000 08:01 43256609                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_blake2.cpython-36m-x86_64-linux-gnu.so
+7f5c5fb83000-7f5c5fd99000 r-xp 00000000 08:01 43258436                   /home/buerliu/anaconda3/lib/libcrypto.so.1.0.0
+7f5c5fd99000-7f5c5ff98000 ---p 00216000 08:01 43258436                   /home/buerliu/anaconda3/lib/libcrypto.so.1.0.0
+7f5c5ff98000-7f5c5ffb4000 r--p 00215000 08:01 43258436                   /home/buerliu/anaconda3/lib/libcrypto.so.1.0.0
+7f5c5ffb4000-7f5c5ffbf000 rw-p 00231000 08:01 43258436                   /home/buerliu/anaconda3/lib/libcrypto.so.1.0.0
+7f5c5ffbf000-7f5c5ffc3000 rw-p 00000000 00:00 0 
+7f5c5ffc3000-7f5c5ffc9000 r-xp 00000000 08:01 43256512                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+7f5c5ffc9000-7f5c601c8000 ---p 00006000 08:01 43256512                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+7f5c601c8000-7f5c601c9000 r--p 00005000 08:01 43256512                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+7f5c601c9000-7f5c601ca000 rw-p 00006000 08:01 43256512                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+7f5c601ca000-7f5c6020a000 rw-p 00000000 00:00 0 
+7f5c6020a000-7f5c6024e000 r-xp 00000000 08:01 43256690                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+7f5c6024e000-7f5c6044e000 ---p 00044000 08:01 43256690                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+7f5c6044e000-7f5c6044f000 r--p 00044000 08:01 43256690                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+7f5c6044f000-7f5c60457000 rw-p 00045000 08:01 43256690                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+7f5c60457000-7f5c60470000 r-xp 00000000 08:01 43256669                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_datetime.cpython-36m-x86_64-linux-gnu.so
+7f5c60470000-7f5c6066f000 ---p 00019000 08:01 43256669                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_datetime.cpython-36m-x86_64-linux-gnu.so
+7f5c6066f000-7f5c60670000 r--p 00018000 08:01 43256669                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_datetime.cpython-36m-x86_64-linux-gnu.so
+7f5c60670000-7f5c60672000 rw-p 00019000 08:01 43256669                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_datetime.cpython-36m-x86_64-linux-gnu.so
+7f5c60672000-7f5c60688000 r-xp 00000000 08:01 43393109                   /home/buerliu/anaconda3/lib/libz.so.1.2.11
+7f5c60688000-7f5c60887000 ---p 00016000 08:01 43393109                   /home/buerliu/anaconda3/lib/libz.so.1.2.11
+7f5c60887000-7f5c60888000 r--p 00015000 08:01 43393109                   /home/buerliu/anaconda3/lib/libz.so.1.2.11
+7f5c60888000-7f5c60889000 rw-p 00016000 08:01 43393109                   /home/buerliu/anaconda3/lib/libz.so.1.2.11
+7f5c60889000-7f5c6088f000 r-xp 00000000 08:01 43256511                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/binascii.cpython-36m-x86_64-linux-gnu.so
+7f5c6088f000-7f5c60a8e000 ---p 00006000 08:01 43256511                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/binascii.cpython-36m-x86_64-linux-gnu.so
+7f5c60a8e000-7f5c60a8f000 r--p 00005000 08:01 43256511                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/binascii.cpython-36m-x86_64-linux-gnu.so
+7f5c60a8f000-7f5c60a90000 rw-p 00006000 08:01 43256511                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/binascii.cpython-36m-x86_64-linux-gnu.so
+7f5c60a90000-7f5c60a9a000 r-xp 00000000 08:01 43256611                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_struct.cpython-36m-x86_64-linux-gnu.so
+7f5c60a9a000-7f5c60c9a000 ---p 0000a000 08:01 43256611                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_struct.cpython-36m-x86_64-linux-gnu.so
+7f5c60c9a000-7f5c60c9b000 r--p 0000a000 08:01 43256611                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_struct.cpython-36m-x86_64-linux-gnu.so
+7f5c60c9b000-7f5c60c9d000 rw-p 0000b000 08:01 43256611                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_struct.cpython-36m-x86_64-linux-gnu.so
+7f5c60c9d000-7f5c60cb3000 r-xp 00000000 08:01 43256668                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_socket.cpython-36m-x86_64-linux-gnu.so
+7f5c60cb3000-7f5c60eb2000 ---p 00016000 08:01 43256668                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_socket.cpython-36m-x86_64-linux-gnu.so
+7f5c60eb2000-7f5c60eb3000 r--p 00015000 08:01 43256668                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_socket.cpython-36m-x86_64-linux-gnu.so
+7f5c60eb3000-7f5c60eb8000 rw-p 00016000 08:01 43256668                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_socket.cpython-36m-x86_64-linux-gnu.so
+7f5c60eb8000-7f5c60ec2000 r-xp 00000000 08:01 43256608                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/math.cpython-36m-x86_64-linux-gnu.so
+7f5c60ec2000-7f5c610c2000 ---p 0000a000 08:01 43256608                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/math.cpython-36m-x86_64-linux-gnu.so
+7f5c610c2000-7f5c610c3000 r--p 0000a000 08:01 43256608                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/math.cpython-36m-x86_64-linux-gnu.so
+7f5c610c3000-7f5c610c5000 rw-p 0000b000 08:01 43256608                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/math.cpython-36m-x86_64-linux-gnu.so
+7f5c610c5000-7f5c610cc000 r-xp 00000000 08:01 43256543                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/select.cpython-36m-x86_64-linux-gnu.so
+7f5c610cc000-7f5c612cb000 ---p 00007000 08:01 43256543                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/select.cpython-36m-x86_64-linux-gnu.so
+7f5c612cb000-7f5c612cc000 r--p 00006000 08:01 43256543                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/select.cpython-36m-x86_64-linux-gnu.so
+7f5c612cc000-7f5c612ce000 rw-p 00007000 08:01 43256543                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/select.cpython-36m-x86_64-linux-gnu.so
+7f5c612ce000-7f5c612d1000 r-xp 00000000 08:01 43256339                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_posixsubprocess.cpython-36m-x86_64-linux-gnu.so
+7f5c612d1000-7f5c614d0000 ---p 00003000 08:01 43256339                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_posixsubprocess.cpython-36m-x86_64-linux-gnu.so
+7f5c614d0000-7f5c614d1000 r--p 00002000 08:01 43256339                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_posixsubprocess.cpython-36m-x86_64-linux-gnu.so
+7f5c614d1000-7f5c614d2000 rw-p 00003000 08:01 43256339                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_posixsubprocess.cpython-36m-x86_64-linux-gnu.so
+7f5c614d2000-7f5c61712000 rw-p 00000000 00:00 0 
+7f5c61712000-7f5c61715000 r-xp 00000000 08:01 43256426                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_heapq.cpython-36m-x86_64-linux-gnu.so
+7f5c61715000-7f5c61914000 ---p 00003000 08:01 43256426                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_heapq.cpython-36m-x86_64-linux-gnu.so
+7f5c61914000-7f5c61915000 r--p 00002000 08:01 43256426                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_heapq.cpython-36m-x86_64-linux-gnu.so
+7f5c61915000-7f5c61917000 rw-p 00003000 08:01 43256426                   /home/buerliu/anaconda3/lib/python3.6/lib-dynload/_heapq.cpython-36m-x86_64-linux-gnu.so
+7f5c61917000-7f5c61997000 rw-p 00000000 00:00 0 
+7f5c61997000-7f5c61c6f000 r--p 00000000 08:01 28844213                   /usr/lib/locale/locale-archive
+7f5c61c6f000-7f5c61d77000 r-xp 00000000 08:01 29496271                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f5c61d77000-7f5c61f76000 ---p 00108000 08:01 29496271                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f5c61f76000-7f5c61f77000 r--p 00107000 08:01 29496271                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f5c61f77000-7f5c61f78000 rw-p 00108000 08:01 29496271                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f5c61f78000-7f5c61f7f000 r-xp 00000000 08:01 29496293                   /lib/x86_64-linux-gnu/librt-2.23.so
+7f5c61f7f000-7f5c6217e000 ---p 00007000 08:01 29496293                   /lib/x86_64-linux-gnu/librt-2.23.so
+7f5c6217e000-7f5c6217f000 r--p 00006000 08:01 29496293                   /lib/x86_64-linux-gnu/librt-2.23.so
+7f5c6217f000-7f5c62180000 rw-p 00007000 08:01 29496293                   /lib/x86_64-linux-gnu/librt-2.23.so
+7f5c62180000-7f5c62182000 r-xp 00000000 08:01 29496282                   /lib/x86_64-linux-gnu/libutil-2.23.so
+7f5c62182000-7f5c62381000 ---p 00002000 08:01 29496282                   /lib/x86_64-linux-gnu/libutil-2.23.so
+7f5c62381000-7f5c62382000 r--p 00001000 08:01 29496282                   /lib/x86_64-linux-gnu/libutil-2.23.so
+7f5c62382000-7f5c62383000 rw-p 00002000 08:01 29496282                   /lib/x86_64-linux-gnu/libutil-2.23.so
+7f5c62383000-7f5c62386000 r-xp 00000000 08:01 29496277                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7f5c62386000-7f5c62585000 ---p 00003000 08:01 29496277                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7f5c62585000-7f5c62586000 r--p 00002000 08:01 29496277                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7f5c62586000-7f5c62587000 rw-p 00003000 08:01 29496277                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7f5c62587000-7f5c62747000 r-xp 00000000 08:01 29496275                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f5c62747000-7f5c62947000 ---p 001c0000 08:01 29496275                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f5c62947000-7f5c6294b000 r--p 001c0000 08:01 29496275                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f5c6294b000-7f5c6294d000 rw-p 001c4000 08:01 29496275                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f5c6294d000-7f5c62951000 rw-p 00000000 00:00 0 
+7f5c62951000-7f5c62969000 r-xp 00000000 08:01 29496274                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f5c62969000-7f5c62b68000 ---p 00018000 08:01 29496274                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f5c62b68000-7f5c62b69000 r--p 00017000 08:01 29496274                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f5c62b69000-7f5c62b6a000 rw-p 00018000 08:01 29496274                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f5c62b6a000-7f5c62b6e000 rw-p 00000000 00:00 0 
+7f5c62b6e000-7f5c62b94000 r-xp 00000000 08:01 29496273                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f5c62ba2000-7f5c62d7a000 rw-p 00000000 00:00 0 
+7f5c62d81000-7f5c62d89000 rw-s 00000000 08:01 29104455                   /tmp/hsperfdata_buerliu/6607
+7f5c62d89000-7f5c62d8a000 rw-p 00000000 00:00 0 
+7f5c62d8a000-7f5c62d8b000 r--p 00000000 00:00 0 
+7f5c62d8b000-7f5c62d8c000 rwxp 00000000 00:00 0 
+7f5c62d8c000-7f5c62d93000 r--s 00000000 08:01 29102521                   /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f5c62d93000-7f5c62d94000 r--p 00025000 08:01 29496273                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f5c62d94000-7f5c62d95000 rw-p 00026000 08:01 29496273                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f5c62d95000-7f5c62d96000 rw-p 00000000 00:00 0 
+7ffc66ad0000-7ffc66ad3000 ---p 00000000 00:00 0 
+7ffc66ad3000-7ffc66bd0000 rw-p 00000000 00:00 0                          [stack]
+7ffc66bd1000-7ffc66bd3000 r--p 00000000 00:00 0                          [vvar]
+7ffc66bd3000-7ffc66bd5000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -ea 
+java_command: <unknown>
+java_class_path (initial): activation.jar;javax.mail.jar;jwitsml-1.0.jar;jdom.jar;axis-1.4.jar;commons-discovery-0.5.jar;commons-logging-1.2.jar;wsdl4j-1.5.2.jar;jaxrpc-api.jar
+Launcher Type: generic
+
+Environment Variables:
+JAVA_HOME=/usr/lib/jvm/java-9-oracle
+PATH=/home/buerliu/.local/share/umake/bin:/home/buerliu/bin:/home/buerliu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-9-oracle/bin:/usr/lib/jvm/java-9-oracle/db/bin
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xad01e0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xad01e0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x927fb0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x927fb0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x927fb0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x927fb0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x9297f0], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x92abf0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x92abf0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x92abf0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x92abf0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=16.04
+DISTRIB_CODENAME=xenial
+DISTRIB_DESCRIPTION="Ubuntu 16.04.3 LTS"
+
+uname:Linux 4.10.0-28-generic #32~16.04.2-Ubuntu SMP Thu Jul 20 10:19:48 UTC 2017 x86_64
+libc:glibc 2.23 NPTL 2.23 
+rlimit: STACK 8192k, CORE 0k, NPROC 14817, NOFILE 1048576, AS infinity
+load average:0.72 0.41 0.30
+
+/proc/meminfo:
+MemTotal:        3837820 kB
+MemFree:          951212 kB
+MemAvailable:    2122696 kB
+Buffers:           70376 kB
+Cached:          1360940 kB
+SwapCached:          364 kB
+Active:          1505004 kB
+Inactive:        1107644 kB
+Active(anon):     747208 kB
+Inactive(anon):   566496 kB
+Active(file):     757796 kB
+Inactive(file):   541148 kB
+Unevictable:          32 kB
+Mlocked:              32 kB
+SwapTotal:       3982332 kB
+SwapFree:        3974804 kB
+Dirty:               464 kB
+Writeback:             0 kB
+AnonPages:       1158928 kB
+Mapped:           129752 kB
+Shmem:            132076 kB
+Slab:             189344 kB
+SReclaimable:     152868 kB
+SUnreclaim:        36476 kB
+KernelStack:        7984 kB
+PageTables:        29452 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     5901240 kB
+Committed_AS:    4178700 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    561152 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      125076 kB
+DirectMap2M:     3860480 kB
+
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 37 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht, tsc, tscinvbit
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 37
+model name	: Intel(R) Core(TM) i3 CPU       M 380  @ 2.53GHz
+stepping	: 5
+microcode	: 0x4
+cpu MHz		: 1466.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 popcnt lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm arat
+bugs		:
+bogomips	: 5054.17
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 37
+model name	: Intel(R) Core(TM) i3 CPU       M 380  @ 2.53GHz
+stepping	: 5
+microcode	: 0x4
+cpu MHz		: 1599.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 popcnt lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm arat
+bugs		:
+bogomips	: 5054.17
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 37
+model name	: Intel(R) Core(TM) i3 CPU       M 380  @ 2.53GHz
+stepping	: 5
+microcode	: 0x4
+cpu MHz		: 1333.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 2
+cpu cores	: 2
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 popcnt lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm arat
+bugs		:
+bogomips	: 5054.17
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 37
+model name	: Intel(R) Core(TM) i3 CPU       M 380  @ 2.53GHz
+stepping	: 5
+microcode	: 0x4
+cpu MHz		: 1333.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 2
+cpu cores	: 2
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 popcnt lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm arat
+bugs		:
+bogomips	: 5054.17
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 3837820k(951212k free), swap 3982332k(3974804k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.161-b12) for linux-amd64 JRE (1.8.0_161-b12), built on Dec 19 2017 16:12:43 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Mon Jan 22 00:39:53 2018
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

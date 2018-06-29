@@ -1,70 +1,84 @@
+import os
 import dash
-from dash.dependencies import Input, Output
 import dash_core_components as dcc
 import dash_html_components as html
+from dash.dependencies import Input, Output, State, Event
 
 from components import Column, Header, Row
 import config
 from auth import auth
 from utils import StaticUrlPath
 
+root = './lib/PWitsml'
+classpath = root + '/activation.jar;' + \
+            root + '/javax.mail.jar;' + \
+            root + '/jwitsml-1.0.jar;' + \
+            root + '/jdom.jar;' + \
+            root + '/axis-1.4.jar;' + \
+            root + '/commons-discovery-0.5.jar;' + \
+            root + '/commons-logging-1.2.jar;' + \
+            root + '/wsdl4j-1.5.2.jar;' + \
+            root + '/jaxrpc-api.jar;'
+os.environ['CLASSPATH'] = classpath
+from jnius import autoclass  # set CLASSPATH before import jnius
 
-app = dash.Dash(
-    __name__,
-    # Serve any files that are available in the `static` folder
-    static_folder='static'
-)
+
+# Test 1: Call java.lang.String Class
+String = autoclass('java.lang.String')
+string_1 = String('Hello World.')
+
+System = autoclass('java.lang.System')
+System.out.println(string_1)
+
+# Test 2: Call Capbilities Class from jwitsml(http://jwitsml.org/javadoc/index.html)
+Capbilities = autoclass('org.jwitsml.Capabilities')
+WitsmlVersion = autoclass('org.jwitsml.WitsmlVersion')
+
+username = "Test"
+version = WitsmlVersion.VERSION_1_3_1
+clientCapabilities = Capbilities(version, username,
+                                 String('abc'),
+                                 String('123-456-7890'),
+                                 String('WV'),
+                                 String('WV'),
+                                 String('WV'),
+                                 String('1.0'))
+
+version = clientCapabilities.getWitsmlVersion()
+System = autoclass('java.lang.System')
+System.out.println(version)
+
+
+app = dash.Dash(__name__, static_folder='static')
 auth(app)
 
-server = app.server  # Expose the server variable for deployments
+server = app.server 
 
-# Standard Dash app code below
-app.layout = html.Div(className='container', children=[
+app.layout = html.Div([
+    html.Link(href='/static/stylesheet.css', rel='stylesheet'),
+    html.Div(
+        style={'height': '70px',
+               'borderBottom': 'thin lightgrey solid'},
+        children=[
+            html.H3('Pyjnius Test',
+                    style={'color': '#506784',
+                           'display': 'inline-block'}
+                    )
+        ]
+    ),
 
-    Header('Sample App'),
-
-    Row([
-        Column(width=4, children=[
-            dcc.Dropdown(
-                id='dropdown',
-                options=[{'label': i, 'value': i} for i in ['LA', 'NYC', 'MTL']],
-                value='LA'
-            )
-        ]),
-        Column(width=8, children=[
-            dcc.Graph(id='graph')
-        ])
-    ])
+    html.Div(
+        style={'height': '70px',
+               'borderBottom': 'thin lightgrey solid'},
+        children=[
+            html.H3('The jwitsml version is {}'.format(version),
+                    style={'color': '#506784',
+                           'display': 'inline-block'}
+                    )
+        ]
+    )
 ])
 
-@app.callback(Output('graph', 'figure'),
-              [Input('dropdown', 'value')])
-def update_graph(value):
-    return {
-        'data': [{
-            'x': [1, 2, 3, 4, 5, 6],
-            'y': [3, 1, 2, 3, 5, 6]
-        }],
-        'layout': {
-            'title': value,
-            'margin': {
-                'l': 60,
-                'r': 10,
-                't': 40,
-                'b': 60
-            }
-        }
-    }
-
-# Optionally include CSS
-app.css.append_css({
-    'external_url': [
-        StaticUrlPath(css) for css in [
-            'dash.css', 'grid.css', 'loading.css', 'page.css',
-            'spacing.css', 'styles.css', 'tables.css', 'typography.css'
-        ]
-    ]
-})
-
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server()
+
